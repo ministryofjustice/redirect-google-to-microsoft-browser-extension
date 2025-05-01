@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Redirect Google to Microsoft",
+  "version": "0.1",
+  "description": "Redirects users based on a stubbed API response after loading a Google page.",
+  "permissions": [],
+  "host_permissions": [
+    "*://*.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
